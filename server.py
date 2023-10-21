@@ -14,7 +14,7 @@ from src.utils import get_model_and_tokenizer
 
 app = Flask(__name__)
 MODEL, TOKENIZER = get_model_and_tokenizer(eval=True)
-
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 @app.route("/ready")
 def ready():
@@ -61,7 +61,8 @@ def intent():
             return_attention_mask=True,
             return_tensors="pt",
         )
-
+        
+        encoding.to(device)
         _, test_prediction = MODEL(encoding["input_ids"], encoding["attention_mask"])
         test_prediction = test_prediction.flatten()
         test_logits = torch.sigmoid(test_prediction).detach().cpu()
