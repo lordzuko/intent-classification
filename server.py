@@ -83,7 +83,7 @@ def intent():
 
 
 def main():
-    app.run(port=PORT)
+    app.run(host="0.0.0.0", port=PORT)
 
 
 if __name__ == "__main__":

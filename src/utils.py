@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import torch
 from transformers import BertTokenizerFast
 
 from config import CHECKPOINT_PATH
@@ -25,5 +26,7 @@ def get_model_and_tokenizer(eval=True):
     if eval:
         model.eval()
         model.freeze()
+    if torch.cuda.is_available():
+        model.to("cuda")
 
     return model, tokenizer
