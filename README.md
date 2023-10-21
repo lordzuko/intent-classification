@@ -103,7 +103,9 @@ The model architecture is a simple one, which I believe is a strong baseline for
 * Running the Flask server
     - `python server.py`
 
-## Docker build
+## Building or downloading docker image
+
+### Building docker image
 * The code has a `Dockerfile` pre-setup
 * In the repository you will find `.env.bkp` file. You need to create a copy of the file:
     - `cp .env.bkp .env`
@@ -119,6 +121,9 @@ The model architecture is a simple one, which I believe is a strong baseline for
     - `sudo docker build . -t lordzuko/intent-clf-service:v1.0.0`
 * Running docker container
     - `sudo docker run -p 8080:8080 lordzuko/intent-clf-service:v1.0.0`
+
+### Dowload pre-built docker image
+* `docker pull lordzuko/intent-clf-service:v1.0.0`
 
 # API Documentation
 The documentation provides how to use the API, with `python`, `curl` etc.
