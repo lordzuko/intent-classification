@@ -308,7 +308,7 @@ You can format the validation and test results for markdown as follows:
 | meal          | 17.0          | 1.0                | 18.0         | 0.00                | 0.00           | 0.00             | 0.00       | 0.00              | 0.00          |
 | quantity      | 142.0         | 5.0                | 9.0          | 0.83                | 0.21           | 1.00             | 1.00       | 0.91              | 0.35          |
 | restriction   | 15.0          | 0.0                | 0.0          | 0.00                | 0.00           | 0.00             | 0.00       | 0.00              | 0.00          |
-|
+
 
 | Summary         | Train Support | Validation Support | Test Support | Validation Precision | Test Precision | Validation Recall | Test Recall | Validation F1-Score | Test F1-Score |
 |---------------|---------------|--------------------|--------------|-----------------------|-----------------|------------------|------------|-------------------|---------------|
