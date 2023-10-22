@@ -15,6 +15,7 @@ repos:
     -   id: check-docstring-first
     -   id: check-json
     -   id: check-added-large-files
+        args: ['--maxkb', '20000']  # Set the limit to 20,000 KB (20MB)
     -   id: check-yaml
     -   id: check-merge-conflict
     -   id: check-ast
