@@ -16,8 +16,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
   * INVALID_TYPE, 400
   * TEXT_EMPTY, 400
   * INTERNAL_ERROR, 500
-* Added model training notebook in `notebooks/`
-
+* Added model training and production evaluation notebook in `notebooks/`
+* Added Docker files
+* Added POSTMAN api documentation
 ### Changed
 
 * Modifed the /ready logic with simple `model` is `None` check as the `IntentClassifier` does not have any `ready()` method.
