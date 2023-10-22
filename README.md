@@ -4,6 +4,7 @@
   - [Challenge Task](#challenge-task)
   - [Approach](#approach)
     - [Data Preparation](#data-preparation)
+    - [Data](#data)
     - [Modeling](#modeling)
 - [Instructions](#instructions)
   - [Installation](#installation)
@@ -86,6 +87,14 @@ For this reason, I have transformed the created a multi-label dataset, with the 
 'aircraft', 'flight_no', 'airport', 'flight', 'quantity', 'meal',
 'capacity', 'restriction', 'airfare', 'distance', 'flight_time', 'cheapest'
 ```
+
+### Data
+- `data` - The provided ATIS dataset
+  - downlaod link: `https://drive.google.com/drive/folders/1I2cALZXOIaz9WnmdtubpVavflkUvFRHG?usp=share_link`
+- `data_mlabel` - The multilabel version of provided ATIS dataset
+  - download link: `https://drive.google.com/drive/folders/1-0VzuUa16j3nEcqywHVKlJONMPg0F40S?usp=share_link`
+- `multilingual_data` - Parallel Multilingual translated data of provdied ATIS dataset
+  - download link - `https://drive.google.com/drive/folders/1A-t73esVP27KbC9eAEMBv6klu8jpQSd-?usp=share_link`
 
 ### Modeling
 
