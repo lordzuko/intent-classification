@@ -243,7 +243,8 @@ The documentation provides how to use the API, with `python`, `cURL` etc.
 
 # Data Preparation and Model Training
 - The process for model training and evaluation is described in notebook: `notebooks/multi_lingual_multilabel_intent_clf.ipynb`
-- The process for model evalation during production scenario is described in notebook: `notebooks/Production_Evaluation.ipynb` 
+- The process for model evalation during production scenario is described in notebook: `notebooks/Production_Evaluation.ipynb`
+  - For running the `Production_Evaluation.ipynb` notebook, you can use the pre-computed predictions on train, test and valid split [here](https://drive.google.com/drive/folders/149twUWTkoHoBnv6-_Mbj0eqhtGPsuztq?usp=share_link) 
 # Evaluation
 
 
