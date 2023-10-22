@@ -9,7 +9,7 @@
       - [Model](#model)
       - [Parameters](#parameters)
 - [Instructions](#instructions)
-  - [Installation](#installation)
+  - [Setup](#setup)
   - [Building or downloading docker image](#building-or-downloading-docker-image)
     - [Building docker image](#building-docker-image)
     - [Dowload pre-built docker image](#dowload-pre-built-docker-image)
@@ -182,10 +182,12 @@ IntentClassifier(
 ```
 # Instructions
 
-## Installation
+## Setup
 
 * Create a conda environment using:
     - `conda create -n "intent-clf-env" python=3.10.11`
+* Activate the conda environment:
+    - `conda activate intent-clf-env`
 * Install dependencies
     - `pip install -r requirements.txt`
 * In the repository you will find `.env.bkp` file. You need to create a copy of the file:
@@ -223,15 +225,16 @@ IntentClassifier(
     - `sudo docker run -p 8080:8080 lordzuko/intent-clf-service:v1.0.0`
 
 ### Dowload pre-built docker image
+* [DockerHub](https://hub.docker.com/repository/docker/lordzuko/intent-clf-service/)
 * `docker pull lordzuko/intent-clf-service:v1.0.0`
 
 # API Documentation
-The documentation provides how to use the API, with `python`, `curl` etc.
-* [POSTMAN documentation](https://documenter.getpostman.com/view/30635450/2s9YRB4CSg#6401b2aa-c4d3-4881-9ba6-7182af00ef43) for the service can be found here.
+The documentation provides how to use the API, with `python`, `cURL` etc.
+* POSTMAN documentation for the service can be found [here](https://documenter.getpostman.com/view/30635450/2s9YRB4CSg#6401b2aa-c4d3-4881-9ba6-7182af00ef43).
 
 # Data Preparation and Model Training
 - The process for model training and evaluation is described in notebook: `notebooks/multi_lingual_multilabel_intent_clf.ipynb`
-- The process for model evalation during production scenario is described in noteboo: `notebooks/Production_Evaluation.ipynb` 
+- The process for model evalation during production scenario is described in notebook: `notebooks/Production_Evaluation.ipynb` 
 # Evaluation
 
 
@@ -273,7 +276,6 @@ You can format the validation and test results for markdown as follows:
 | meal             | 0.992806         | 0.926189        |
 | quantity         | 0.999711         | 0.996064        |
 | restriction      | 0.000000         | 0.000000        |
-|
 
 
 ## Classificaiton Report
@@ -305,7 +307,7 @@ You can format the validation and test results for markdown as follows:
 | macro avg     | 13271.0       | 700.0              | 2589.0       | 0.79                | 0.64           | 0.78             | 0.76       | 0.78              | 0.65          |
 | weighted avg  | 13271.0       | 700.0              | 2589.0       | 0.99                | 0.96           | 0.99             | 0.97       | 0.99              | 0.96          |
 | samples avg   | 13271.0       | 700.0              | 2589.0       | 0.99                | 0.95           | 0.99             | 0.97       | 0.99              | 0.96          |
-|
+
 
 
 
