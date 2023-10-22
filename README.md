@@ -13,6 +13,7 @@
   - [Building or downloading docker image](#building-or-downloading-docker-image)
     - [Building docker image](#building-docker-image)
     - [Dowload pre-built docker image](#dowload-pre-built-docker-image)
+    - [Limitation](#limitation)
 - [API Documentation](#api-documentation)
 - [Data Preparation and Model Training](#data-preparation-and-model-training)
 - [Evaluation](#evaluation)
@@ -188,6 +189,12 @@ IntentClassifier(
     - `conda create -n "intent-clf-env" python=3.10.11`
 * Activate the conda environment:
     - `conda activate intent-clf-env`
+* Pylint Setup:
+  * `conda install -c conda-forge pre_commit`
+  * `pre-commit install`
+  * `pre-commit autoupdate`
+  * Note: Not keeping these dependencies in `requirements.txt` as they are only required for development purpose.
+
 * Install dependencies
     - `pip install -r requirements.txt`
 * In the repository you will find `.env.bkp` file. You need to create a copy of the file:
@@ -228,6 +235,8 @@ IntentClassifier(
 * [DockerHub](https://hub.docker.com/repository/docker/lordzuko/intent-clf-service/)
 * `docker pull lordzuko/intent-clf-service:v1.0.0`
 
+### Limitation
+* The Dockerfile currently does not support GPU usage even though the inference code works with GPU. This is because the chosen base image does not have NVIDIA-CUDA drivers installed.
 # API Documentation
 The documentation provides how to use the API, with `python`, `cURL` etc.
 * POSTMAN documentation for the service can be found [here](https://documenter.getpostman.com/view/30635450/2s9YRB4CSg#6401b2aa-c4d3-4881-9ba6-7182af00ef43).
@@ -319,3 +328,5 @@ You can format the validation and test results for markdown as follows:
    2. Also, data management could take advantage of this field
 4. The `/intent` api does not check for the language. This could be problametic as our model currently only supports for 3 languages, whereas the tokenizer we are using can support 104 langauges. Not detecting the supported languages could lead to unforseen model performance issues.
 5. Data imbalance among intent classes is currently a bottlenect and upsampling needs to be down for low data classes. We can use translation and paraphrasing to tackle the data imbalance issues. 
+6. Update Dockerfile to support GPU usage.
+7. `NannyML` installation has numpy version mismatch with the rest of the code, so it might create issues with building Docker image and has not been tested yet. However, given that it is not required during inference, I suggest install it in separate environment for testing for now.
